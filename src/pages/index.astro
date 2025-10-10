@@ -1,37 +1,37 @@
 ---
-// Component Imports
-import Counter from '../components/Counter';
-
-const someProps = {
-	count: 0,
-};
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import Link from "../components/Link.astro"
+import Image from "astro/components/Image.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+import HeroImage from "../assets/self.avif"
+import './landing.css'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<Counter {...someProps} client:visible>
-				<h1>Hello, React!</h1>
-			</Counter>
-		</main>
-	</body>
-</html>
+<BaseLayout>
+			<div class="section-hero">
+				<div class="container">
+					<div class="hero-grid">
+						<div class="hero-content">
+							<h1 class="hero-heading gradient text-gradient">
+								Hello! 
+								<br>
+								My name is Amina
+							</h1>
+							<div class="hero-subtitle">
+								I am a <span class="gradient text-gradient"> fullstack</span> software engineer 👩🏾‍💻. My portfolio is currently under construction 🚧 . In the meantime, you can check me out on <Link url="https://github.com/afoon">github<i class='bxl  bx-github'  ></i> </Link> and <Link url="https://www.linkedin.com/in/aminata-foon/">linkedin<i class='bxl  bx-linkedin-square'  ></i> </Link>.
+							</div>
+															<Link variant="button" url="mailto:me@aminatafoon.com">
+									Contact Me
+								</Link>
+						</div>
+						<div class="hero-image-container">
+							<div class="clipped-div">
+								<div class="circle">
+									<Image class="hero-image" src={HeroImage}
+									alt="selfie"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</BaseLayout>
