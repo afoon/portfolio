@@ -3,59 +3,102 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+
+:root {
+  /*  Colors */
+  --color-primary: #219EBC;
+  --color-primary-light: #8ECAE6;
+  --color-primary-dark: #023047;
+  --color-secondary: #FFb703;
+  --color-teritary: #FB8500;
+  --color-bg-light: white;
+  --color-bg-dark: #011E2D;
+  --text-color-primary: #181818;
+  /* Weights */
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+  /* Size */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+  --text-4xl: 4rem;
+  --text-display: 5rem;
+}
 html {
   height: 100%;
+  font-size: 16px;
+  line-height: 14px;
 }
 body {
   font-family: "Open Sans Variable";
   margin: 0;
   min-height: 100%;
-  background-color: #fff;
-  font-size: 14px;
+  background-color: var(--color-bg-light);
+  font-size: var(--text-base);
   line-height: 20px;
-  color: #181818;
+  color: var(--text-color-primary)
 }
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
+  font-weight: var(--bold);
   margin-bottom: 10px;
+  font-family: "Roboto Variable", sans-serif;
+}
 
-    font-family: "Roboto Variable", sans-serif;
-}
-h1 {
-  font-size: 38px;
-  line-height: 44px;
+.text-display{
+  font-size: var(--text-display);
+  line-height: calc(var(--text-display) *1.5);
   margin-top: 20px;
 }
-h2 {
-  font-size: 32px;
-  line-height: 36px;
+
+.text-h1 {
+  font-size: var(--text-3xl);
+  line-height: calc(var(--text-3xl) *1.5);
   margin-top: 20px;
 }
-h3 {
-  font-size: 24px;
-  line-height: 30px;
+.text-h2 {
+  font-size: var(--text-2xl);
+  line-height: calc(var(--text-2xl) *1.5);
   margin-top: 20px;
 }
-h4 {
-  font-size: 18px;
-  line-height: 24px;
+.text-h3 {
+  font-size: var(--text-xl);
+  line-height: calc(var(--text-xl) *1.5);
+  margin-top: 20px;
+}
+.text-h4 {
+  font-size: var(--text-lg);
+  line-height: calc(var(--text-lg) *1.5);
   margin-top: 10px;
 }
-h5 {
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 10px;
+
+.subtitle-1 {
+  font-family: "Open Sans Variable";
+  font-size: var(--text-xl);
+  line-height: calc(var(--text-xl)*1.5);
 }
-h6 {
-  font-size: 12px;
-  line-height: 18px;
-  margin-top: 10px;
+.subtitle-2 {
+  font-family: "Open Sans Variable";
+  font-size: var(--text-lg);
+  line-height: calc(var(--text-lg)*1.5);
 }
+
+.mono {
+  font-family: "JetBrains Mono Variable";
+}
+
 p {
   margin-top: 0;
   margin-bottom: 10px;
@@ -68,4 +111,8 @@ img {
 
 .no-margins {
     margin: 0
+}
+
+.flex {
+  display: flex;
 }
