@@ -1,11 +1,14 @@
 ---
-    import './Link.css'
+import "./Link.css";
 
-    const {url, variant} = Astro.props
-    const isButton = Boolean(variant=="button")
+const { url, variant } = Astro.props;
+const isButton = Boolean(variant == "button");
 ---
-    <div class:list={["link-container", {button: variant}]}>
-        <a class="link-text" href={url}>
-        <slot/>
-        </a>
-    </div>
+
+<span
+  ><div class:list={["link-container", { button: variant }]}>
+    <a class="link-text" href={url}>
+      <slot />
+    </a>
+  </div></span
+>
