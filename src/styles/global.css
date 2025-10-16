@@ -42,9 +42,12 @@ body {
   background-color: var(--color-bg-light);
   font-size: var(--text-base);
   line-height: 20px;
-  color: var(--text-color-primary)
+  color: var(--text-color-primary);
+  isolation: isolate;
 }
-
+main {
+  width: 100%;
+}
 
 h1,
 h2,

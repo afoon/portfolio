@@ -1,0 +1,18 @@
+---
+import Image from "astro/components/Image.astro";
+import "./HeroImage.css";
+import HeroImageSrc from "../../assets/self.avif";
+---
+
+<div class="hero-image-container">
+  <div class="circle-container">
+    <div class="circle overlap light-blue small"></div>
+    <div class="circle overlap yellow"></div>
+    <div class="circle overlap blue small"></div>
+    <div class="image-wrapper">
+      <Image class="hero-image" src={HeroImageSrc} alt="selfie" />
+      <div class="semi-circle"></div>
+      <div class="semi-circle flipped"></div>
+    </div>
+  </div>
+</div>
