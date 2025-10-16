@@ -1,0 +1,16 @@
+---
+const {directon, wrap, styles, class: className} = Astro.props
+const flexDirection = directon ?? 'row'
+const flexWrap = wrap ? 'wrap' : 'nowrap'
+console.log(className)
+---
+<style define:vars={{ flexDirection, flexWrap}}>
+    .baseClasses {
+        display: flex;
+        flex-direction: var(--flex-direction);
+        flex-wrap: var(--flexWrap);
+    }
+</style>
+<div class:list={['baseClasses', {[className]: className}]} style={{...styles}}>
+    <slot/>
+</div>

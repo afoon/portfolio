@@ -1,4 +1,17 @@
-.link-container {
+---
+const { url, variant } = Astro.props;
+---
+
+<span>
+  <div class:list={["link-container", { [variant]: variant }]}>
+    <a class="link-text" href={url}>
+      <slot />
+    </a>
+  </div>
+</span>
+
+<style>
+  .link-container {
   font-size: inherit;
   display: inline-block;
   font-weight: 600;
@@ -38,3 +51,4 @@
 	background-color:  var(--color-primary-light);
 	border-bottom: none;
 }
+</style>
