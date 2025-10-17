@@ -1,9 +1,3 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 
 :root {
   /*  Colors */
@@ -30,23 +24,74 @@
   --text-4xl: 4rem;
   --text-display: 5rem;
 }
-html {
-  height: 100%;
-  font-size: 16px;
-  line-height: 14px;
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: cal(1rem * 0.5);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+
+/*  My globals */
+
 body {
   font-family: "Open Sans Variable";
-  margin: 0;
-  min-height: 100%;
   background-color: var(--color-bg-light);
   font-size: var(--text-base);
-  line-height: 20px;
   color: var(--text-color-primary);
   isolation: isolate;
 }
 main {
   width: 100%;
+}
+
+/* To-do: Move to Typography file */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: var(--bold);
 }
 
 h1,
@@ -55,7 +100,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--bold);
   margin-bottom: 10px;
   font-family: "Roboto Variable", sans-serif;
 }
@@ -110,10 +154,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-}
-
-.no-margins {
-    margin: 0
 }
 
 .flex {
