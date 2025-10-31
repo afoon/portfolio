@@ -3,6 +3,7 @@ import '@fontsource-variable/roboto'
 import '@fontsource-variable/open-sans'
 import '@fontsource-variable/jetbrains-mono'
 import '../styles/global.css'
+import Navigation from '../components/Navigation.astro'
 ---
 <html lang="en">
 	<head>
@@ -10,9 +11,12 @@ import '../styles/global.css'
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 	<body>
+		<Navigation/>
 		<main>
             <slot/>
 		</main>

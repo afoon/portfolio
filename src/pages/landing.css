@@ -2,24 +2,24 @@
 .hero-container {
    justify-content: center;
   align-items: center;
+  flex-wrap: wrap-reverse;
 }
 .section-hero {
-  min-height: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 8% 0;
+  padding: 4% 0;
 }
 
 .hero-content-wrapper {
-  max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
+  flex:1;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .hero-content {
   align-items: center;
   justify-content: flex-start;
-  padding: 1rem;
+  padding: 2rem;
   gap: 24px;
 }
 
@@ -30,4 +30,8 @@
   margin-bottom: 0;
   line-height: 120%;
   display: flex;
+}
+
+.hero-subtitle {
+  padding: 1rem;
 }

@@ -1,8 +1,8 @@
 ---
-const { url, variant } = Astro.props;
+const { url, variant, ...rest } = Astro.props;
 ---
 
-<span>
+<span {...rest}>
   <div class:list={["link-container", { [variant]: variant }]}>
     <a class="link-text" href={url}>
       <slot />
@@ -17,6 +17,7 @@ const { url, variant } = Astro.props;
   font-weight: 600;
   margin: 0px;
   padding: 0px;
+  cursor: pointer;
 }
 
 .link-text {
@@ -26,7 +27,7 @@ const { url, variant } = Astro.props;
 }
 
 .link-container:hover{
-  border-bottom: black solid 2px;
+  border-bottom: var(--color-primary) solid 2px;
 }
 
 .button{
@@ -48,7 +49,8 @@ const { url, variant } = Astro.props;
 }
 
 .button:hover{
-	background-color:  var(--color-primary-light);
+	backdrop-filter:blur(4px);
+  background-color:hsla(192, 70%, 43%,0.4);
 	border-bottom: none;
 }
 </style>

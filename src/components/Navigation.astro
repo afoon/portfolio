@@ -1,0 +1,102 @@
+---
+import Link from "./globals/Link.astro";
+import Flex from "./globals/Flex.astro";
+---
+
+<script>
+  document.getElementById("hamburger")?.addEventListener("click", () => {
+    const menu = document.querySelector(".mobile-menu");
+    if (menu) {
+      menu.classList.toggle("invisible");
+    }
+  });
+</script>
+<nav class="nav">
+  <div class="flex nav-wrapper">
+    <div class="nav-bar-links liquid-glass">
+      <Link class="nav-link" url="/">
+        <i class="bx bx-home"></i>
+        Home
+      </Link>
+      <Link class="nav-link" url="/projects">
+        <i class="bx bx-briefcase-alt"></i> Projects
+      </Link>
+    </div>
+    <button id="hamburger" class="hamburger liquid-glass" onclick="handleOpen">
+      <i class="bx bx-menu icon"></i>
+    </button>
+    <div class="mobile-menu liquid-glass invisible">
+      <div class="nav-link">
+        <Link class="nav-link">
+          <i class="bx bx-home"></i>
+          Home
+        </Link>
+      </div>
+      <div class="nav-link">
+        <Link class="nav-link">
+          <i class="bx bx-briefcase-alt"></i> Projects
+        </Link>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav-bar-links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    max-width: fit-content;
+  }
+  .nav-link {
+    padding: 10px;
+    font-size: var(--text-lg);
+  }
+  .nav {
+    position: sticky;
+    z-index: 4;
+    top: 20px;
+        margin-right: 50px;
+  }
+  .nav-wrapper {
+    justify-content: flex-end;
+  }
+  .hamburger {
+    position: relative;
+    font-size: var(--text-xl);
+    border-radius: 100%;
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-bold);
+    border: none;
+  }
+    .mobile-menu {
+      position: absolute;
+      display: none;
+      padding: 12px;
+      top: 70px;
+      height: min-content;
+      text-align: center;
+    }
+  /* Phone */
+  @media screen and (max-width: 767px) {
+    .nav-bar-links {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+    .invisible {
+      display: none;
+    }
+  }
+</style>
