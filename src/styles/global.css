@@ -1,0 +1,179 @@
+
+:root {
+  /*  Colors */
+  --color-primary: #219EBC;
+  --color-primary-light: #8ECAE6;
+  --color-primary-dark: #023047;
+  --color-secondary: #FFb703;
+  --color-teritary: #FB8500;
+  --color-bg-light: white;
+  --color-bg-dark: #011E2D;
+  --text-color-primary: #181818;
+  /* Weights */
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+  /* Size */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+  --text-4xl: 4rem;
+  --text-display: 5rem;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: cal(1rem * 0.5);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+
+/*  My globals */
+
+body {
+  font-family: "Open Sans Variable";
+  background-color: var(--color-bg-light);
+  font-size: var(--text-base);
+  color: var(--text-color-primary);
+  isolation: isolate;
+}
+main {
+  width: 100%;
+}
+
+/* To-do: Move to Typography file */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: var(--bold);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 10px;
+  font-family: "Roboto Variable", sans-serif;
+}
+
+.text-display{
+  font-size: var(--text-display);
+  line-height: calc(var(--text-display) *1.5);
+  margin-top: 20px;
+}
+
+.text-h1 {
+  font-size: var(--text-4xl);
+  line-height: calc(var(--text-4xl) *1.5);
+  margin-top: 20px;
+}
+.text-h2 {
+  font-size: var(--text-2xl);
+  line-height: calc(var(--text-2xl) *1.5);
+  margin-top: 20px;
+}
+.text-h3 {
+  font-size: var(--text-xl);
+  line-height: calc(var(--text-xl) *1.5);
+  margin-top: 20px;
+}
+.text-h4 {
+  font-size: var(--text-lg);
+  line-height: calc(var(--text-lg) *1.5);
+  margin-top: 10px;
+}
+
+.subtitle-1 {
+  font-family: "Open Sans Variable";
+  font-size: var(--text-xl);
+  line-height: calc(var(--text-xl)*1.5);
+}
+.subtitle-2 {
+  font-family: "Open Sans Variable";
+  font-size: var(--text-lg);
+  line-height: calc(var(--text-lg)*1.5);
+}
+
+.mono {
+  font-family: "JetBrains Mono Variable";
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  background: url(/src/assets/background.svg);
+  background-color: hsl(200, 65%, 90%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: fill-box;
+}
+
+.liquid-glass {
+  backdrop-filter: blur(5px);
+  background-color:rgba(255, 255, 255, 0.12);
+  inset: 0;
+  border-radius: 26px;
+   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 1px 0 rgba(255, 255, 255, 0.3),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,56 @@
+---
+const { url, variant, ...rest } = Astro.props;
+---
+
+<span {...rest}>
+  <div class:list={["link-container", { [variant]: variant }]}>
+    <a class="link-text" href={url}>
+      <slot />
+    </a>
+  </div>
+</span>
+
+<style>
+  .link-container {
+  font-size: inherit;
+  display: inline-block;
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.link-text {
+  line-height: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-container:hover{
+  border-bottom: var(--color-primary) solid 2px;
+}
+
+.button{
+  background-color: var(--color-primary);
+  min-width: 200px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  padding: 8px 24px;
+  font-size: var(--text-base);
+  font-weight: var(--bold);
+  transition: background-color .2s;
+  display: flex;
+	a {
+		color: white;
+	    text-decoration: none;
+	}
+}
+
+.button:hover{
+	backdrop-filter:blur(4px);
+  background-color:hsla(192, 70%, 43%,0.4);
+	border-bottom: none;
+}
+</style>

@@ -1,47 +1,26 @@
-.gradient {
-background-image: linear-gradient(132deg, #023047, #219ebc 15%, #09ae78 31%, #64ae43 46%, #ffb703 67%, #fff);
-}
 
-.hero-section{
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.hero-container {
+   justify-content: center;
   align-items: center;
-}
-
-
-.text-gradient {
- -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  background-clip: text;
-}
-.container{
-  padding-left: 24px;
-  padding-right: 24px;
+  flex-wrap: wrap-reverse;
 }
 .section-hero {
-    padding-top: 100px;
-  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4% 0;
 }
-.hero-grid {
-  display: flex;
-  gap: 48px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+
+.hero-content-wrapper {
+  flex:1;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .hero-content {
-    gap: 24px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 544px;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 56px;
-  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  gap: 24px;
 }
 
 .hero-heading {
@@ -49,47 +28,10 @@ background-image: linear-gradient(132deg, #023047, #219ebc 15%, #09ae78 31%, #64
   align-items: flex-start;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 72px;
   line-height: 120%;
   display: flex;
 }
-.hero-subtitle{
-  font-size: 24px;
-  line-height: 40px;
-}
 
-.hero-image-container{
-  height: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.hero-image{
-  box-sizing: border-box;
-  object-fit: cover;
-  object-position: 0% 100%;
-  border-radius: 100%;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-
-.circle {
-  -webkit-text-fill-color: inherit;
-  background-color: #ffb703;
-  background-clip: content-box;
-  border-radius: 50%;
-  align-self: auto;
-  width: 500px;
-  height: 500px;
-}
-.clipped-div {
-  border: 1px #000;
-  border-radius: 48%;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100%;
-  display: flex;
-  overflow: clip;
+.hero-subtitle {
+  padding: 1rem;
 }

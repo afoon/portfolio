@@ -1,0 +1,23 @@
+
+---
+---
+<style>
+    .text-gradient {
+  --gradientColor: linear-gradient(
+    132deg,
+    #219ebc 15%,
+    #64ae43 42%,
+    #ffb703 56%
+  );
+}
+    .text-gradient {
+  background-image: var(--gradientColor);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+</style>
+
+<span class="text-gradient">
+    <slot/>
+</span>
