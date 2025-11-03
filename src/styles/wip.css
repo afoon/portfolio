@@ -1,0 +1,17 @@
+    .wrapper-hero{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 8px;
+    }
+    .text{
+        text-align: left;
+        padding: 4px 16px;
+    }
+    .img-wrapper{
+          max-width: 50%;
+    }
+    .image {
+          object-fit: contain;
+    }

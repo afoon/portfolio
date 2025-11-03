@@ -161,7 +161,7 @@ img {
 }
 
 body {
-  background: url(/src/assets/background.svg);
+  background-image: url(/src/assets/background.svg);
   background-color: hsl(200, 65%, 90%);
   background-size: cover;
   background-repeat: no-repeat;

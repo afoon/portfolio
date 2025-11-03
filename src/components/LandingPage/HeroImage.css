@@ -34,6 +34,7 @@
 .group {
   transform-origin: center;
   transform-box: fill-box;
+  -webkit-transform-origin: center;
 }
 
 .svg-container {
@@ -93,12 +94,13 @@ img {
   outline: var(--b) solid var(--c);
   outline-offset: var(--_o);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   background: 
     radial-gradient(
       circle closest-side,
       rgba(255, 255, 255, 0.12) calc(99% - var(--b)),
       var(--c) calc(100% - var(--b)) 99%,
-      transparent) var(--_g);
+      rgba(255,255,255,0)) var(--_g);
   mask:
     linear-gradient(#fff 0 0) no-repeat
     50% calc(-1 * var(--_o)) / calc(100% / var(--f) - 2 * var(--b)) 50%,
