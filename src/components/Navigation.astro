@@ -27,13 +27,13 @@ import Flex from "./globals/Flex.astro";
     </button>
     <div class="mobile-menu liquid-glass invisible">
       <div class="nav-link">
-        <Link class="nav-link">
+        <Link class="nav-link" url="/">
           <i class="bx bx-home"></i>
           Home
         </Link>
       </div>
       <div class="nav-link">
-        <Link class="nav-link">
+        <Link class="nav-link" url="/projects">
           <i class="bx bx-briefcase-alt"></i> Projects
         </Link>
       </div>
@@ -56,7 +56,7 @@ import Flex from "./globals/Flex.astro";
     position: sticky;
     z-index: 4;
     top: 20px;
-        margin-right: 50px;
+    margin-right: 50px;
   }
   .nav-wrapper {
     justify-content: flex-end;
@@ -74,14 +74,14 @@ import Flex from "./globals/Flex.astro";
     font-weight: var(--font-bold);
     border: none;
   }
-    .mobile-menu {
-      position: absolute;
-      display: none;
-      padding: 12px;
-      top: 70px;
-      height: min-content;
-      text-align: center;
-    }
+  .mobile-menu {
+    position: absolute;
+    display: none;
+    padding: 12px;
+    top: 70px;
+    height: min-content;
+    text-align: center;
+  }
   /* Phone */
   @media screen and (max-width: 767px) {
     .nav-bar-links {
@@ -94,6 +94,7 @@ import Flex from "./globals/Flex.astro";
 
     .mobile-menu {
       display: block;
+      background-color:rgba(255, 255, 255, 0.45);
     }
     .invisible {
       display: none;

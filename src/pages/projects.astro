@@ -1,42 +1,25 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
-import construction from "../assets/construction.png"
+import WorkInProgress from "../components/WorkInProgress"
 ---
 
 <BaseLayout>
-    <div class="wrapper-hero">
-        <div class="img-wrapper">
-            <Image class="image" src={construction} alt="Image by freepik"/>
-        </div>
-        <div class="text">
-            <h1 class="text-h1">
-                Under construction
-            </h1>
-            <h2 class="subtitle-2">
-                I'm hard at work updating the site. New content will be up soon.
-            </h2>
-        </div>
+    <div class="liquid-glass heading-wrapper">
+        <h1 class="text-h1 project-heading">
+            Projects
+        </h1>
     </div>
+    <WorkInProgress/>
 </BaseLayout>
 
 <style>
-    .wrapper-hero{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow: wrap;
+    .project-heading {
+        padding: 4px 32px;
     }
-    .text{
-        flex: 1
-        text-align: left;
-    }
-    .img-wrapper{
-    }
-    .image {
-          object-fit: contain
-          max-width: fit-content;
-          scale: 0.65;
+    .heading-wrapper{
+        text-align: center;
+        max-width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
     }
 </style>
