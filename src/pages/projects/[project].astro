@@ -1,0 +1,38 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/globals/Badge';
+import { imageConfig } from 'astro:assets';
+import { Image } from 'astro:assets';
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({
+    params: { project: project.id },
+    props: { project },
+  }));
+}
+
+const {project} = Astro.props
+const {Content} = await render(project)
+---
+<BaseLayout>
+<div>
+  <h1>{project.data.title}</h1>
+  <p class="subtitle-1">{project.data.description}</p>
+  <div>
+    <img src={project.data.image.src} alt={project.data.image.alt}/>
+  </div>
+  <div style={{display: "flex", flexDirection: "row"}}>
+    <aside>
+      Tech Stack
+      {project.data.skills.map( skill => <Badge skill={skill}/>)}
+      Date
+      Live link
+    </aside>
+    <section>
+      <h2>About</h2>
+      <Content/>
+    </section>
+  </div>
+</div>
+</BaseLayout>

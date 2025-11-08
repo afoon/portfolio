@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WorkInProgress from "../../components/WorkInProgress"
+import ProjectCard from "../../components/Projects/ProjectCard";
+import { mapObject } from '../../../styled-system/helpers.mjs';
+
+
+  const projects = await getCollection('projects');
+
+---
+
+<BaseLayout>
+        <h1 style={{color: "var(--color-primary)"}}>Projects</h1>
+        <div class="project-collection">
+            {projects.map( project => <ProjectCard project={project}/>)}
+        </div>
+</BaseLayout>
+
+<style>
+    .project-collection {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+</style>
