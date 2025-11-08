@@ -166,6 +166,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: fill-box;
+  height: 100svh;
 }
 
 .liquid-glass {
