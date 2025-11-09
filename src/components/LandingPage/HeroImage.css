@@ -79,14 +79,14 @@
   height: 100%;
   min-width: 25rem;
 }
-img {
-  --s: 200px; /* image size */
+ img.hero-image {
+  --s: 500px; /* image size */
   --b: 2px; /* border thickness */
   --c: rgba(255, 255, 255, 0.3); /* border color */
-  --f: 0.75; /* initial scale */
+  --f: 1; /* initial scale */
 
   --_g: 50% / calc(100% / var(--f)) 100% no-repeat content-box;
-  --_o: calc((1 / var(--f) - 1) * var(--s) / 2 - var(--b));
+  --_o: calc((1 / var(--f)) * var(--s) / 2 - var(--b));
 
   width: var(--s);
   aspect-ratio: 1;

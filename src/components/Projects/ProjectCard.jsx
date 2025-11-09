@@ -6,7 +6,7 @@ const {skills, title, description, image} = project.data
   return (
     <a className={cards.links} href={`/projects/${project.id}`}>
     <div className={`liquid-glass ${cards.wrapper}`}>
-      <img className={cards.image} src={image.src} alt={image.alt}/>
+      <img class={cards.image} src={image.src} alt={image.alt}/>
       <div className={cards.content}>
         <h2>{title}</h2>
         <p className="subtitle-2">{description}</p>
