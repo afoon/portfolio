@@ -4,7 +4,7 @@ description: "Word game based on wordle"
 skills: ["ts", "react", tailwind, vite]
 code: "https://github.com/afoon/scaffoldle"
 link: "https://afoon-scaffoldle-game.netlify.app/"
-image: {src: "src/assets/scaffoldle.png", alt: "Photo of scaffoldle word game"}
+image: {src: "/src/assets/scaffoldle.png", alt: "Photo of scaffoldle word game"}
 ---
 
 ### Overview
