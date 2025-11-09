@@ -91,3 +91,6 @@
       width: 100%;
     }
   }
+      .link-container:hover{
+  border: none;
+}
