@@ -4,6 +4,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Badge from '../../components/globals/Badge';
 import { imageConfig } from 'astro:assets';
 import { Image } from 'astro:assets';
+import styles from '../../styles/Project.module.css'
+import Link from '../../components/globals/Link.astro';
+
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
   return projects.map(project => ({
@@ -16,21 +19,22 @@ const {project} = Astro.props
 const {Content} = await render(project)
 ---
 <BaseLayout>
-<div>
+<div class={styles.project}>
   <h1>{project.data.title}</h1>
   <p class="subtitle-1">{project.data.description}</p>
-  <div>
+  <div class={styles.imageWrapper}>
     <img src={project.data.image.src} alt={project.data.image.alt}/>
   </div>
-  <div style={{display: "flex", flexDirection: "row"}}>
-    <aside>
-      Tech Stack
-      {project.data.skills.map( skill => <Badge skill={skill}/>)}
-      Date
-      Live link
+  <div class={styles.body}>
+    <aside class="liquid-glass">
+      <b class="text-h4">Tech Stack</b>
+      <div class={styles.skills}>
+        {project.data.skills.map( skill => <Badge skill={skill}/>)}
+      </div>
+      { project.data?.link && <Link>Live site <i class='bx  bx-link-external'></i> </Link>}
+      {project.data?.code && <Link>Code Repo <i class='bxl bx-github'></i></Link>}
     </aside>
     <section>
-      <h2>About</h2>
       <Content/>
     </section>
   </div>

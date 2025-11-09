@@ -16,6 +16,7 @@ const projects = defineCollection({
     skills: z.array(z.string()),
     updatedDate: z.coerce.date().optional(),
     link: z.string().url().optional(),
+    code: z.string().url().optional(),
     relatedPosts: z.array(reference('projects')).optional()
   }),
 });
