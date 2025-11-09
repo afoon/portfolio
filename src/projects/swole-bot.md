@@ -3,7 +3,7 @@ title: "Swole Bot"
 description: "A chatbot api to manage a weekly fitness challenge with too many rules."
 skills: ["node", "mongo"]
 code: "https://github.com/afoon/get-swole"
-image: {src: "/src/assets/swole-bot.jpg", alt: "Photo by robot by Mohammed Nohassi"}
+image: {src: "src/assets/swole-bot.jpg", alt: "Photo by robot by Mohammed Nohassi"}
 ---
 ### Summary
 
