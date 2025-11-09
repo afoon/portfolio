@@ -1,7 +1,1 @@
-    <svg preserveAspectRatio="none" viewbox="0 0 500 500" width="800" height="800" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
-      <g class="group">
-        <circle class="overlap" fill="#7ad4e6" r="180" cx="365" cy="580"/>
-        <circle class="overlap" fill="#219EBC" r="260" cx="540" cy="365"/>
-        <circle class="overlap"  fill="#FFb703" r="220" cx="225" cy="330"/>
-      </g>
-    </svg>
+<svg preserveAspectRatio="none" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#7ad4e6" d="M68.125 72.5a22.5 22.5 0 0 1-22.5 22.5 22.5 22.5 0 0 1-22.5-22.5 22.5 22.5 0 0 1 45 0"/><path fill="#219ebc" d="M100 45.625a32.5 32.5 0 0 1-32.5 32.5 32.5 32.5 0 0 1-32.5-32.5 32.5 32.5 0 0 1 65 0"/><path fill="#ffb703" d="M55.625 41.25a27.5 27.5 0 0 1-27.5 27.5 27.5 27.5 0 0 1-27.5-27.5 27.5 27.5 0 0 1 55 0"/></svg>
