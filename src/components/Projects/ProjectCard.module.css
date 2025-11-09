@@ -1,0 +1,35 @@
+
+.wrapper{
+    max-width: 500px;
+    height:100%;
+    overflow: hidden;
+    transition: transform 750ms;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper:hover{
+transform: scale(1.05);
+}
+.image{
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+}
+.content{
+    padding: 0 20px 20px 20px;
+}
+
+    .skills{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+a {
+        text-decoration: none;
+            color: inherit;
+    }
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}

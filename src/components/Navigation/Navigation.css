@@ -1,0 +1,96 @@
+ .nav-bar-links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    max-width: fit-content;
+  }
+  .logo-nav{
+        margin-left: 2%;
+        margin-right: 2%;
+    justify-content: space-between;
+    align-items: center;
+     background-color: transparent;
+  }
+  .nav-link {
+    padding: 10px;
+    font-size: var(--text-lg);
+  }
+
+  .nav-link i {
+    border: var(--color-blue-950) 1.5px solid;
+    color: var(--color-primary-light);
+    background-color: var(--color-primary);
+  }
+  .nav {
+    background-color: transparent;
+    position: sticky;
+    z-index: 4;
+    top: 20px;
+  }
+  .nav-wrapper {
+    justify-content: flex-end;
+  }
+  .hamburger {
+    anchor-name: --anchor;
+    font-size: var(--text-xl);
+    border-radius: 100%;
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-bold);
+    border: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+
+  .mobile-menu {
+    position-anchor: --anchor;
+    position: absolute;
+    padding: 12px;
+    top: 10px;
+    height: min-content;
+    text-align: center;
+    position-area: bottom span-left;
+  }
+
+  [popover] {
+    border: 0
+  }
+
+  .frosted-glass{
+        border-radius: 25px;
+    backdrop-filter: blur(5px);
+    background: radial-gradient(
+      rgba(255, 255, 255, 0.2) calc(99% - 1px),
+      rgba(255, 255, 255, 0.4) calc(100% - 1px) 99%,
+      rgba(255, 255, 255, 0)
+    );
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+    outline-offset: -1px;
+  }
+
+  
+  /* Phone */
+  @media screen and (max-width: 767px) {
+    .nav-bar-links {
+      display: none;
+    }
+
+    .mobile.hamburger {
+      display: flex;
+    }
+
+    #mobile:popover-open {
+      display: block;
+      background-color:rgba(255, 255, 255, 0.45);
+      width: 100%;
+    }
+  }
+      .link-container:hover{
+  border: none;
+}

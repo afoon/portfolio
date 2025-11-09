@@ -1,0 +1,40 @@
+---
+import Link from "../globals/Link.astro";
+import Flex from "../globals/Flex.astro";
+import Logo from "./Logo.astro"
+import './Navigation.css'
+---
+
+<nav class="nav">
+  <div class="flex logo-nav">
+    <Link  noHover url="/"><Logo/></Link>
+    <div class="flex nav-wrapper">
+      <div class="nav-bar-links frosted-glass">
+        <Link class="nav-link" url="/">
+          <i class="bx bxs-home bx-border-circle"></i>
+          Home
+        </Link>
+        <Link class="nav-link" url="/projects">
+          <i class="bx bxs-briefcase-alt bx-border-circle"></i> Projects
+        </Link>
+      </div>
+      <button class="mobile hamburger frosted-glass" popovertarget="mobile">
+        <i class="bx bx-menu icon"></i>
+      </button>
+      <div id="mobile" class="mobile mobile-menu liquid-glass" popover>
+        <div class="nav-link">
+          <Link class="nav-link" url="/">
+            <i class="bx bxs-home bx-border-circle"></i>
+            Home
+          </Link>
+        </div>
+        <div class="nav-link">
+          <Link class="nav-link" url="/projects">
+            <i class="bx bxs-briefcase-alt bx-border-circle"></i> Projects
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+

@@ -3,7 +3,7 @@ import '@fontsource-variable/roboto'
 import '@fontsource-variable/open-sans'
 import '@fontsource-variable/jetbrains-mono'
 import '../styles/global.css'
-import Navigation from '../components/Navigation.astro'
+import Navigation from '../components/Navigation/Navigation.astro'
 ---
 <html lang="en">
 	<head>
@@ -16,9 +16,11 @@ import Navigation from '../components/Navigation.astro'
 		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 	<body>
-		<Navigation/>
-		<main>
-            <slot/>
-		</main>
+		<div class="content-wrapper">
+			<Navigation/>
+			<main class="main-content">
+				<slot/>
+			</main>
+		</div>
 	</body>
 </html>

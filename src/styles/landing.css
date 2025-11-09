@@ -5,17 +5,14 @@
   flex-wrap: wrap-reverse;
 }
 .section-hero {
-  margin-left: auto;
-  margin-right: auto;
   padding: 4% 0;
     transform: translate3d(0,0,0);
-    -webkit-backface-visibility: visible
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
 }
 
 .hero-content-wrapper {
   flex:1;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .hero-content {

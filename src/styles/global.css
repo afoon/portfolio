@@ -1,14 +1,39 @@
 
 :root {
   /*  Colors */
-  --color-primary: #219EBC;
-  --color-primary-light: #8ECAE6;
-  --color-primary-dark: #023047;
+      /* Pacific Blue */
+--color-blue-50: #effbfc;
+--color-blue-100: #d5f3f8;
+--color-blue-200: #b1e7f0;
+--color-blue-300: #7ad4e6;
+--color-blue-400: #3db8d3;
+--color-blue-500: #229ebc;
+--color-blue-600: #1f7d9b;
+--color-blue-700: #1f657f;
+--color-blue-800: #225468;
+--color-blue-900: #204659;
+--color-blue-950: #102e3c;
+/* Yellow */
+--color-yellow-50: #fffeea;
+--color-yellow-100: #fff9c5;
+--color-yellow-200: #fff485;
+--color-yellow-300: #ffe746;
+--color-yellow-400: #ffd71b;
+--color-yellow-500: #ffb703;
+--color-yellow-600: #e28b00;
+--color-yellow-700: #bb6202;
+--color-yellow-800: #984b08;
+--color-yellow-900: #7c3e0b;
+--color-yellow-950: #481f00;
+/* Colors applied */
+  --color-primary: var(--color-blue-500);
+  --color-primary-light: var(--color-blue-300);
+  --color-primary-dark: var(--color-blue-900);
   --color-secondary: #FFb703;
   --color-teritary: #FB8500;
-  --color-bg-light: white;
+  --color-bg-light: var(--color-blue-200);
   --color-bg-dark: #011E2D;
-  --text-color-primary: #181818;
+  --text-color-primary: var(--color-blue-950);
   /* Weights */
   --light: 300;
   --regular: 400;
@@ -110,22 +135,22 @@ h6 {
   margin-top: 20px;
 }
 
-.text-h1 {
+h1, .text-h1 {
   font-size: var(--text-4xl);
   line-height: calc(var(--text-4xl) *1.5);
   margin-top: 20px;
 }
-.text-h2 {
+h2, .text-h2 {
   font-size: var(--text-2xl);
   line-height: calc(var(--text-2xl) *1.5);
   margin-top: 20px;
 }
-.text-h3 {
+h3, .text-h3 {
   font-size: var(--text-xl);
   line-height: calc(var(--text-xl) *1.5);
   margin-top: 20px;
 }
-.text-h4 {
+h4, .text-h4 {
   font-size: var(--text-lg);
   line-height: calc(var(--text-lg) *1.5);
   margin-top: 10px;
@@ -149,6 +174,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 10px;
+  font-size: var(--text-base);
 }
 img {
   max-width: 100%;
@@ -162,10 +188,11 @@ img {
 
 body {
   background-image: url(/src/assets/background.svg);
-  background-color: hsl(200, 65%, 90%);
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: fill-box;
+  height: 100svh;
+  overflow: hidden;
 }
 
 .liquid-glass {
@@ -176,4 +203,15 @@ body {
    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1),
     inset 2px 2px 1px 0 rgba(255, 255, 255, 0.3),
     inset -1px -1px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.content-wrapper{
+  overflow: scroll;
+  height: 100%;
+}
+
+.main-content{
+  margin-top: 2%;
+  padding-right: 3%;
+  padding-left: 3%;
 }
