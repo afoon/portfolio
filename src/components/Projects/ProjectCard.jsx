@@ -1,5 +1,5 @@
 import Badge from "../globals/Badge";
-import cards from "./Project.module.css"
+import cards from "./ProjectCard.module.css"
 
 const ProjectCard = ({project}) => {
 const {skills, title, description, image} = project.data
