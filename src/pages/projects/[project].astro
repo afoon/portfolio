@@ -23,7 +23,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 const {project} = Astro.props
 const {Content} = await render(project)
 ---
-<BaseLayout>
+<BaseLayout title={project.data.title}>
 <div class={styles.project}>
   <h1>{project.data.title}</h1>
   <p class="subtitle-1">{project.data.description}</p>

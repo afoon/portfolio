@@ -4,10 +4,11 @@ import '@fontsource-variable/open-sans'
 import '@fontsource-variable/jetbrains-mono'
 import '../styles/global.css'
 import Navigation from '../components/Navigation/Navigation.astro'
+const {title} = Astro.props
 ---
 <html lang="en">
 	<head>
-		<title>Home | Amina Foon</title>
+		<title> {title} | Amina Foon</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />

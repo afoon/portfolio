@@ -1,0 +1,26 @@
+---
+import Badge from "../globals/Badge";
+import cards from "./ProjectCard.module.css"
+import { Image } from "astro:assets";
+const {project} = Astro.props
+const {skills, title, description, image} = project.data
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif}"
+);
+
+---
+
+
+    <a class={cards.links} href={`/projects/${project.id}`}>
+    <div class={`liquid-glass ${cards.wrapper}`}>
+      <Image class={cards.image} src={images[image.src]()} alt={image.alt}/>
+      <div class={cards.content}>
+        <h2>{title}</h2>
+        <p class="subtitle-2">{description}</p>
+        <div class={cards.skills}>
+            {skills.map( skill => <Badge skill={skill}/>)}
+        </div>
+      </div>
+    </div>
+    </a>
