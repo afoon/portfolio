@@ -15,7 +15,8 @@ node: { name: "Node.js", icon: "bx-nodejs", color: "#549d4a" },
   go: { name: "GoLang", icon: "bx-go-lang", color: "#007D9C" },
   html: { name: "HTML", icon: "bx-html5", color: "#DD4B25" },
   python: { name: "Python", icon: "bx-python", color: "#3572A4" },
-  vite: {name: "Vite", icon: "bx-vite-js", color: "#BB60E7"}
+  vite: {name: "Vite", icon: "bx-vite-js", color: "#BB60E7"},
+  panda: {name: "Panda CSS", icon: "bx-bear", color: "#EFD81C"}
 };
 const Badge = ({ skill }) => {
     const {color, name, icon} = SKILLS[skill]

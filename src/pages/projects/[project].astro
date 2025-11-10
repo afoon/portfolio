@@ -21,6 +21,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 const {project} = Astro.props
+const {link, code} = project?.data
 const {Content} = await render(project)
 ---
 <BaseLayout title={project.data.title}>
@@ -36,8 +37,8 @@ const {Content} = await render(project)
       <div class={styles.skills}>
         {project.data.skills.map( skill => <Badge skill={skill}/>)}
       </div>
-      { project.data?.link && <Link>Live site <i class='bx  bx-link-external'></i> </Link>}
-      {project.data?.code && <Link>Code Repo <i class='bxl bx-github'></i></Link>}
+      { link && <Link url={link ?? ''} target>Live site <i class='bx  bx-link-external'></i> </Link>}
+      {code && <Link url={code ?? ''}target >Code Repo <i class='bxl bx-github'></i></Link>}
     </aside>
     <section>
       <Content/>

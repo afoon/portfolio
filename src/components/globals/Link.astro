@@ -1,10 +1,10 @@
 ---
-const { url, variant, noHover, ...rest } = Astro.props;
+const { url, variant, noHover, target, ...rest } = Astro.props;
 ---
 
 <span {...rest}>
   <div class:list={["link-container", { [variant]: variant, "hover": !noHover }]}>
-    <a class="link-text" href={url}>
+    <a class="link-text" target={target ? "_blank": ""} href={url}>
       <slot />
     </a>
   </div>
