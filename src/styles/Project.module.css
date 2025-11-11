@@ -20,18 +20,21 @@
     flex-wrap: wrap;
     gap: 48px;
     margin-bottom: 40px;
-    aside {
-        flex: 1;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    border-radius: 25px;
-    }
     section {
         flex: 2;
         p {
             font-size: var(--text-lg);
         }
     }
+}
+.aside {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: sticky;
+        top: 12%;
+    border-radius: 25px;
+    max-height: fit-content;
 }
