@@ -1,9 +1,9 @@
 ---
-const { url, variant, noHover, target, ...rest } = Astro.props;
+const { url, variant, outline, noHover, target, ...rest } = Astro.props;
 ---
 
 <span {...rest}>
-  <div class:list={["link-container", { [variant]: variant, "hover": !noHover }]}>
+  <div class:list={["link-container", { [variant]: variant, "hover": !noHover, "outline": outline }]}>
     <a class="link-text" target={target ? "_blank": ""} href={url}>
       <slot />
     </a>
@@ -26,9 +26,10 @@ const { url, variant, noHover, target, ...rest } = Astro.props;
   text-decoration: none;
 }
 
-.link-container.hover:hover{
+
+  .link-container.hover:hover {
   border-bottom: var(--color-primary) solid 2px;
-}
+  }
 
 .button{
   background-color: var(--color-primary);
@@ -48,9 +49,20 @@ const { url, variant, noHover, target, ...rest } = Astro.props;
 	}
 }
 
+.button.outline {
+    background-color: transparent;
+    border: currentColor 2px solid;
+    a{
+      color: var(--text-color-primary);
+    }
+}
 .button:hover{
 	backdrop-filter:blur(4px);
-  background-color:hsla(192, 70%, 43%,0.4);
-	border-bottom: none;
+  background-color:rgb( from var(--color-primary) r g b / 0.5);
+  border-bottom: transparent;
+}
+.outline:hover{
+  border-bottom: 2px solid var(--text-color-primary);
+  background-color:rgb( from var(--text-color-primary) r g b / 0.2);
 }
 </style>

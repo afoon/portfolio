@@ -19,18 +19,24 @@ import TextGradient from "../components/globals/TextGradient";
 				My name is Amina
 			</TextGradient>
           </h1>
-          <div class="subtitle-1 hero-subtitle">
-            I am a <TextGradient> fullstack</TextGradient> software
-            engineer 👩🏾‍💻. My portfolio is currently under construction 🚧 . In the
-            meantime, you can check me out on <Link target
+          <div class="text-h2 hero-subtitle">
+            I am a <TextGradient><b> frontend</b></TextGradient> software
+            engineer 👩🏾‍💻  
+            <br/>
+            <div>
+              <Link target
               url="https://github.com/afoon"
-              >github<i class="bxl bx-github"></i>
-            </Link> and <Link target url="https://www.linkedin.com/in/aminata-foon/"
-              >linkedin<i class="bxl bx-linkedin-square"></i>
-            </Link>.
+              ><i class="bxl bx-github"></i>
+            </Link><Link target url="https://www.linkedin.com/in/aminata-foon/"
+            ><i class="bxl bx-linkedin-square"></i>
+          </Link>
+        </div>
           </div>
-          <Link variant="button" url="mailto:me@aminatafoon.com">
+          <Link variant="button" noHover outline url="mailto:me@aminatafoon.com">
             Contact Me
+          </Link>
+          <Link variant="button" noHover url="/projects">
+            View my work
           </Link>
         </Flex>
       </div>
