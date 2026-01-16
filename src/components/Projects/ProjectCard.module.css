@@ -6,6 +6,10 @@
     transition: transform 750ms;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-bg-light);
+    border: 2px solid var(--color-blue-950);
+    border-radius: 25px;
+    box-shadow: 2px 3px 0 1px var(--color-blue-950);
 }
 .wrapper:hover{
 transform: scale(1.05);
@@ -17,13 +21,14 @@ transform: scale(1.05);
 }
 .content{
     padding: 0 20px 20px 20px;
+    border-top: 2px solid var(--color-blue-950);
 }
 
     .skills{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 4px;
+        gap: 6px;
     }
 a {
         text-decoration: none;

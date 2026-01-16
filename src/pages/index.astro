@@ -3,44 +3,52 @@ import Link from "../components/globals/Link.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroImage from "../components/LandingPage/HeroImage.astro";
 import "../styles/landing.css";
-import Flex from "../components/globals/Flex.astro";
-import TextGradient from "../components/globals/TextGradient";
+import SocialLink from "../components/globals/SocialLink.jsx";
 ---
 
 <BaseLayout title="Home">
   <div class="section-hero">
-    <Flex wrap="wrap-reverse" align="center">
+    <div class="flex-wrapper">
       <div class="hero-content-wrapper">
-        <Flex wrap="wrap" direction="column" class="hero-content liquid-glass">
-          <h1 class="text-display hero-heading">
-            <TextGradient>
-				Hello!
-				<br />
-				My name is Amina
-			</TextGradient>
-          </h1>
-          <div class="text-h2 hero-subtitle">
-            I am a <TextGradient><b> frontend</b></TextGradient> software
-            engineer 👩🏾‍💻  
-            <br/>
-            <div>
-              <Link target
-              url="https://github.com/afoon"
-              ><i class="bxl bx-github"></i>
-            </Link><Link target url="https://www.linkedin.com/in/aminata-foon/"
-            ><i class="bxl bx-linkedin-square"></i>
-          </Link>
-        </div>
+        <div class="hero-content">
+          <div class="hero-heading">
+
+            <h1 class="text-display hero-title">
+              Hello! 👋
+              <br />
+              My name is <mark>Amina</mark>
+            </h1>
+            <h2 class="hero-subtitle">
+              I am a frontend software engineer with 7+ years of experience at
+              startups and civic tech.
+            </h2>
           </div>
-          <Link variant="button" noHover outline url="mailto:me@aminatafoon.com">
-            Contact Me
-          </Link>
-          <Link variant="button" noHover url="/projects">
-            View my work
-          </Link>
-        </Flex>
+          <div class="hero-cta">
+            <Link
+              variant="button"
+              noHover
+              outline
+              url="mailto:me@aminatafoon.com"
+            >
+              Get in touch
+            </Link>
+            <Link variant="button" noHover url="/projects">
+              View Projects
+            </Link>
+          </div>
+          <div class="social-links">
+            <SocialLink href="https://github.com/afoon" icon="github"               
+            bgColor="var(--color-bg-light)"
+            color="var(--color-blue-950)" />
+            <SocialLink
+              href="https://www.linkedin.com/in/aminata-foon/"
+              icon="linkedin"
+              iconSize="1rem"
+            />
+          </div>
+        </div>
       </div>
       <HeroImage />
-    </Flex>
+    </div>
   </div>
 </BaseLayout>

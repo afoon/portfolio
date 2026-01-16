@@ -8,11 +8,26 @@
 .image{
         object-fit: cover;
         height: min-content;
+        border: 3px solid var(--color-blue-950);
+        box-shadow: 2px 3px 0 1px var(--color-blue-950);
+        border-radius: 25px;
 }
 .skills{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+.title{
+    margin-bottom: 0;
+}
+.subtitle {
+    background-color: var(--color-bg-light);
+    border: 2px solid var(--color-blue-950);
+    box-shadow: 2px 3px 0 1px var(--color-blue-950);
+    border-radius: 25px;
+    padding: 0.5rem 3rem;
+    max-width: fit-content;
+    margin-bottom: 1rem;
 }
 .body {
     display: flex;
@@ -21,9 +36,17 @@
     gap: 48px;
     margin-bottom: 40px;
     section {
+        background-color: var(--color-bg-light);
+        border: 2px solid var(--color-blue-950);
+        box-shadow: 2px 3px 0 1px var(--color-blue-950);
+        border-radius: 25px;
+        padding: 20px;
         flex: 2;
         p {
             font-size: var(--text-lg);
+        }
+        h2 {
+            font-size: var(--text-2xl);
         }
     }
 }
@@ -37,4 +60,7 @@
         top: 12%;
     border-radius: 25px;
     max-height: fit-content;
+    background-color: var(--color-bg-light);
+    border: 2px solid var(--color-blue-950);
+    box-shadow: 2px 3px 0 1px var(--color-blue-950);
 }

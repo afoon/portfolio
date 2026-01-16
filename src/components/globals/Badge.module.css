@@ -1,17 +1,14 @@
 .badge{
     width: fit-content;
     padding: 4px 12px;
-      backdrop-filter: blur(5px);
-    inset: 0;
-    border-radius: 26px;
-   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1),
-    inset 2px 2px 1px 0 rgba(255, 255, 255, 0.3),
-    inset -1px -1px 1px 1px oklch(from var(--color) l c h / 30%);
-    background-color: oklch(from var(--color) l c h / 12%);
+    border-radius: 24px;
+    border: 1.5px solid var(--color-blue-950);
+   box-shadow: 1.5px 2.5px 0 1px var(--color-blue-950);
+    background-color: oklch(from var(--color) l 40% h );
 }
 
 .badge i {
-    color: var(--color);
+    color: var(--color-blue-950);
     vertical-align: middle;
     margin-right: 4px;
     font-weight: 400;

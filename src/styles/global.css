@@ -31,7 +31,7 @@
   --color-primary-dark: var(--color-blue-900);
   --color-secondary: #FFb703;
   --color-teritary: #FB8500;
-  --color-bg-light: var(--color-blue-200);
+  --color-bg-light: #fefefe;
   --color-bg-dark: #011E2D;
   --text-color-primary: var(--color-blue-950);
   /* Weights */
@@ -94,11 +94,19 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+a{
+  text-decoration: none;
+}
+
 
 /*  My globals */
 
+html {
+  font-size: 16px;
+}
+
 body {
-  font-family: "Open Sans Variable";
+  font-family: "Work Sans Variable";
   background-color: var(--color-bg-light);
   font-size: var(--text-base);
   color: var(--text-color-primary);
@@ -126,7 +134,7 @@ h4,
 h5,
 h6 {
   margin-bottom: 10px;
-  font-family: "Roboto Variable", sans-serif;
+  font-family: "Manrope Variable", sans-serif;
 }
 
 .text-display{
@@ -157,12 +165,12 @@ h4, .text-h4 {
 }
 
 .subtitle-1 {
-  font-family: "Open Sans Variable";
+  font-family: "Work Sans Variable";
   font-size: var(--text-xl);
   line-height: calc(var(--text-xl)*1.5);
 }
 .subtitle-2 {
-  font-family: "Open Sans Variable";
+  font-family: "Work Sans Variable";
   font-size: var(--text-lg);
   line-height: calc(var(--text-lg)*1.5);
 }
@@ -187,22 +195,12 @@ img {
 }
 
 body {
-  background-image: url(/src/assets/background.svg);
+  background-image: url(/src/assets/bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: fill-box;
   height: 100svh;
   overflow: hidden;
-}
-
-.liquid-glass {
-  backdrop-filter: blur(5px);
-  background-color:rgba(255, 255, 255, 0.12);
-  inset: 0;
-  border-radius: 26px;
-   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1),
-    inset 2px 2px 1px 0 rgba(255, 255, 255, 0.3),
-    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .content-wrapper{
@@ -215,3 +213,16 @@ body {
   padding-right: 3%;
   padding-left: 3%;
 }
+
+  /* Phone */
+  @media screen and (width <= 640px) {
+    html {
+      font-size: 12px;
+    }
+  }
+    /* Tablet */
+  @media screen and (640px < width < 1024px) {
+    html {
+      font-size: 14px;
+    }
+  }
