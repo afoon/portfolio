@@ -46,6 +46,7 @@
     font-weight: var(--font-bold);
     border: 1px solid var(--color-blue-950);
     background-color: var(--color-bg-light);
+    color: var(--color-blue-950);
     align-self: center;
     margin-right: 8px;
     box-shadow: 2px 3px 0 1px var(--Pacific-Blue-950, #102E3C);
