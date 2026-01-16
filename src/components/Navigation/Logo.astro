@@ -1,29 +1,41 @@
 ---
-import TextGradient from "../globals/TextGradient";
 import { Image } from "astro:assets";
 import circles from "../../assets/circles.svg"
 ---
 
 <div class="logo-container">
-  <b style="color: var(--color-blue-900)">amina<span style="color: var(--color-primary)">foon</span></b>
-    <Image class="logo-overlap" src={circles} alt="" />
+  <Image class="logo-overlap" src={circles} alt="" />
+  <div class="title-container">
+    <p class="title">amina<span style="color: var(--color-secondary)">foon</span></p>
+    <p class="subtitle">software engineer</p>
+  </div>
 </div>
 
 <style>
   .logo-container {
     display: flex;
-    padding: 10px 40px;
-    align-items: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--text-xl);
+    p {
+      margin: 0;
+    }
+  }
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .title{
     font-size: var(--text-lg);
-    border-radius: 25px;
-    backdrop-filter: blur(5px);
-    background: radial-gradient(
-      rgba(255, 255, 255, 0.2) calc(99% - 1px),
-      rgba(255, 255, 255, 0.4) calc(100% - 1px) 99%,
-      rgba(255, 255, 255, 0)
-    );
-    outline: 1px solid rgba(255, 255, 255, 0.3);
-    outline-offset: -1px;
+    font-weight: var(--bold);
+    line-height: var(--text-lg);
+  }
+  .subtitle {
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-blue-600);
+    line-height: var(--text-base);
   }
 
   .link-container:hover{

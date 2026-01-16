@@ -13,7 +13,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 
     <a class={cards.links} href={`/projects/${project.id}`}>
-    <div class={`liquid-glass ${cards.wrapper}`}>
+    <div class={`${cards.wrapper}`}>
       <Image class={cards.image} src={images[image.src]()} alt={image.alt}/>
       <div class={cards.content}>
         <h2>{title}</h2>

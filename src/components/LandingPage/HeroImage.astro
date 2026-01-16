@@ -3,23 +3,9 @@ import Image from "astro/components/Image.astro";
 import "./HeroImage.css";
 import HeroImageSrc from "../../assets/self.webp";
 
-const container = 700
-const radius = 200
-const viewBox  = `0 0 ${container} ${container}`
 ---
 
 <div class="hero-image-container">
-  <div class="circle-container">
-    <svg class="svg-container" preserveAspectRatio="none">
-      <g class="group" style="--radius: {{radius}}">
-        <circle class="overlap" fill="var(--color-primary-light)" r={radius * .9} cx={container * .45} cy={container - (radius * .5)}/>
-        <circle class="overlap" fill="var(--color-primary)" r={radius * 1.3} cx={container * 0.7} cy={container * .55}/>
-        <circle class="overlap"  fill="var(--color-secondary)" r={radius * 1} cx={container/4} cy={container/2} style="--origin: {{container}}"/>
-      </g>
-    </svg>
-    </div>
     <Image class="hero-image" src={HeroImageSrc} alt="selfie" />
-    <div class="image-wrapper">
-      </div>
     </div> 
 </div>

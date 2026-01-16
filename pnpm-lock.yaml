@@ -17,10 +17,16 @@ importers:
       '@fontsource-variable/jetbrains-mono':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource-variable/manrope':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@fontsource-variable/open-sans':
         specifier: ^5.2.7
         version: 5.2.7
       '@fontsource-variable/roboto':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource-variable/work-sans':
         specifier: ^5.2.8
         version: 5.2.8
       '@types/react':
@@ -345,11 +351,17 @@ packages:
   '@fontsource-variable/jetbrains-mono@5.2.8':
     resolution: {integrity: sha512-WBA9elru6Jdp5df2mES55wuOO0WIrn3kpXnI4+W2ek5u3ZgLS9XS4gmIlcQhiZOWEKl95meYdvK7xI+ETLCq/Q==}
 
+  '@fontsource-variable/manrope@5.2.8':
+    resolution: {integrity: sha512-nc9lOuCRz73UHnovDE2bwXUdghE2SEOc7Aii0qGe3CLyE03W1a7VnY5Z6euRiapiKbCkGS+eXbY3s/kvWeGeSw==}
+
   '@fontsource-variable/open-sans@5.2.7':
     resolution: {integrity: sha512-wzCLm2STuekK9Fz58DiuBnk4GgJpvvVtAU85a4b06ACNG/UsVjQcCvkUd6R/ETlHfsaykCUZamLRvSXg4KtWuA==}
 
   '@fontsource-variable/roboto@5.2.8':
     resolution: {integrity: sha512-UBhCzUXpkZZqBhTnkIhkM3USlSuu2Da6k4mjiRaEnZtvMOMWcQVOV6oV2cY00plUuJZrsnTRtt3ZRRJF09gV5w==}
+
+  '@fontsource-variable/work-sans@5.2.8':
+    resolution: {integrity: sha512-8uWtTt0/B5NxGie9xUVD5y5Ch4Q+Hy7kFYKtUpwYbzSAgJEoaMxT8rMnfnK7zfAYSLC8GnGO1/tXrFtKIYYQVQ==}
 
   '@humanwhocodes/momoa@2.0.4':
     resolution: {integrity: sha512-RE815I4arJFtt+FVeU1Tgp9/Xvecacji8w/V6XtXsWWH/wz/eNkNbhb+ny/+PlVZjV0rxQpRSQKNKE3lcktHEA==}
@@ -3584,9 +3596,13 @@ snapshots:
 
   '@fontsource-variable/jetbrains-mono@5.2.8': {}
 
+  '@fontsource-variable/manrope@5.2.8': {}
+
   '@fontsource-variable/open-sans@5.2.7': {}
 
   '@fontsource-variable/roboto@5.2.8': {}
+
+  '@fontsource-variable/work-sans@5.2.8': {}
 
   '@humanwhocodes/momoa@2.0.4': {}
 

@@ -1,10 +1,10 @@
 ---
-const { url, variant, outline, noHover, target, ...rest } = Astro.props;
+const { url, variant, outline, noHover, target, linkClass, ...rest } = Astro.props;
 ---
 
 <span {...rest}>
-  <div class:list={["link-container", { [variant]: variant, "hover": !noHover, "outline": outline }]}>
-    <a class="link-text" target={target ? "_blank": ""} href={url}>
+  <div class:list={["link-container", { [variant]: variant, "hover": !noHover, "outline": outline, fullWidth: linkClass &&linkClass.includes("nav-link-mobile") }]}>
+    <a class:list={["link-text", {fullWidth: linkClass &&linkClass.includes("nav-link-mobile")}]} target={target ? "_blank": ""} href={url}>
       <slot />
     </a>
   </div>
@@ -27,22 +27,21 @@ const { url, variant, outline, noHover, target, ...rest } = Astro.props;
 }
 
 
-  .link-container.hover:hover {
-  border-bottom: var(--color-primary) solid 2px;
-  }
-
 .button{
   background-color: var(--color-primary);
-  min-width: 200px;
-  border-radius: 8px;
+  min-width: fit-content;
+  border-radius: 24px;
+  border: 2px solid var(--color-blue-950);
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 52px;
-  padding: 8px 24px;
+  padding: 0 2rem;
   font-size: var(--text-base);
   font-weight: var(--bold);
+  gap: 10px;
   transition: background-color .2s;
-  display: flex;
+  box-shadow: 2px 3px 0 1px var(--color-blue-950);
 	a {
 		color: white;
 	    text-decoration: none;
@@ -50,19 +49,35 @@ const { url, variant, outline, noHover, target, ...rest } = Astro.props;
 }
 
 .button.outline {
-    background-color: transparent;
+    background-color: var(--color-bg-light);
     border: currentColor 2px solid;
     a{
       color: var(--text-color-primary);
     }
 }
 .button:hover{
-	backdrop-filter:blur(4px);
-  background-color:rgb( from var(--color-primary) r g b / 0.5);
-  border-bottom: transparent;
+
+  background-color:hsl( from var(--color-primary)  h calc(s + 10) calc(l - 10) );
 }
 .outline:hover{
   border-bottom: 2px solid var(--text-color-primary);
-  background-color:rgb( from var(--text-color-primary) r g b / 0.2);
+  background-color: hsl( from var(--text-color-primary) h s 90%);
+}
+
+@media screen and (width <= 768px) {
+.link-container.fullWidth {
+  width: 100svw;
+  text-align: center;
+}
+a.fullWidth {
+  display: flex;
+      height: 5em;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--text-xl);
+      font-weight: var(--medium);
+      border-bottom: 2px solid var(--color-blue-950);
+    }
 }
 </style>
