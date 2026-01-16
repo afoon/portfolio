@@ -82,10 +82,13 @@
     }
     .nav-link {
       border: none;
+    }
+
+    .nav-bar-link-mobile {
       border-bottom: 2px solid var(--color-blue-950);
       width: 100%;
       justify-content: center;
-
+      padding: 3rem 0;
     }
 
     .mobile.hamburger {
