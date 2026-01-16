@@ -1,10 +1,10 @@
 ---
-const { url, variant, outline, noHover, target, ...rest } = Astro.props;
+const { url, variant, outline, noHover, target, class:linkClass, ...rest } = Astro.props;
 ---
 
 <span {...rest}>
-  <div class:list={["link-container", { [variant]: variant, "hover": !noHover, "outline": outline }]}>
-    <a class="link-text" target={target ? "_blank": ""} href={url}>
+  <div class:list={["link-container", { [variant]: variant, "hover": !noHover, "outline": outline, fullWidth: linkClass &&linkClass.includes("nav-link") }]}>
+    <a class:list={["link-text", {fullWidth: linkClass &&linkClass.includes("nav-link")}]} target={target ? "_blank": ""} href={url}>
       <slot />
     </a>
   </div>
@@ -25,19 +25,33 @@ const { url, variant, outline, noHover, target, ...rest } = Astro.props;
   color: inherit;
   text-decoration: none;
 }
+.link-container.fullWidth {
+  width: 100svw;
+  text-align: center;
+}
+a.fullWidth {
+  display: flex;
+      height: 5em;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--text-xl);
+      font-weight: var(--medium);
+      border-bottom: 2px solid var(--color-blue-950);
+    }
 
 
 
 .button{
   background-color: var(--color-primary);
-  min-width: 200px;
+  min-width: fit-content;
   border-radius: 24px;
   border: 2px solid var(--color-blue-950);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 52px;
-  padding: 8px 24px;
+  padding: 0 2rem;
   font-size: var(--text-base);
   font-weight: var(--bold);
   gap: 10px;

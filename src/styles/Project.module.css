@@ -15,7 +15,7 @@
 .skills{
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.75rem;
 }
 .title{
     margin-bottom: 0;
@@ -63,4 +63,13 @@
     background-color: var(--color-bg-light);
     border: 2px solid var(--color-blue-950);
     box-shadow: 2px 3px 0 1px var(--color-blue-950);
+}
+
+@media screen and (width <= 1024px) {
+    .body{
+        flex-direction: column;
+    }
+.aside {
+    position: static;
+}
 }
