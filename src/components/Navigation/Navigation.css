@@ -29,7 +29,8 @@
     background-color: var(--color-bg-light);
     position: sticky;
     z-index: 4;
-    border: 2px solid var(--color-blue-950);;
+    border: 2px solid var(--color-blue-950);
+    top: 0;
   }
   .nav-wrapper {
     justify-content: flex-end;
