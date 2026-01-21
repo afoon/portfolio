@@ -10,7 +10,7 @@ const {pathname} = Astro.url;
     <Link  noHover url="/"><Logo/></Link>
     <div class="flex nav-wrapper">
       <div class="nav-bar-links">
-        <Link class:list={["nav-link", {active: pathname === "/projects"}]} noHover url="/projects">
+        <Link class:list={["nav-link", {active: pathname.includes("/projects")}]} noHover url="/projects">
            Projects
         </Link>
         <Link class="nav-link" noHover url="mailto:me@aminatafoon.com">
