@@ -8,13 +8,36 @@ const projects = await getCollection("projects");
 ---
 
 <BaseLayout title="Projects">
-  <h1 class="heading">Projects</h1>
+  <h1 class="heading"><mark>Projects</mark></h1>
   <div class="project-collection">
     {projects.map((project) => <ProjectCard project={project} />)}
   </div>
 </BaseLayout>
 
 <style>
+  mark {
+  --color-highlight: var(--color-blue-300);
+
+  background-color: transparent;
+  background-image: linear-gradient(-100deg, 
+  hsl(from var(--color-highlight) h s l/ 0.0),
+  hsl(from var(--color-highlight) h s l/ 0.1) 10%,
+  hsl(from var(--color-highlight) h s l / 0.4) 35%,
+  hsl(from var(--color-highlight) h calc(s + 10) l ) 70%,
+  hsl(from var(--color-highlight) h s l ) 75%,
+  hsl(from var(--color-highlight) h s l / 0.8) 80%,
+  hsl(from var(--color-highlight) h s l / 0.0) 95%,
+  hsl(from var(--color-highlight) h s l/ 0.0));
+  padding: 0rem 5rem 1rem 0;
+  border-radius: 1.5em 0;
+  background-position: center;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  color: inherit;
+  margin-inline-start: -8px;
+  padding-inline-start: 8px;
+  display: inline;
+}
   .project-collection {
     display: flex;
     gap: 24px;
